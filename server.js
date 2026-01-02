@@ -48,10 +48,7 @@ app.use('/live-status', liveStatus);
 const attrs = [{ name: 'commonName', value: 'localhost' }];
 const pems = selfsigned.generate(attrs, { days: 365 });
 
-const sslOptions = {
-  key: pems.private,
-  cert: pems.cert
-};
+
 
 // ✅ Start HTTPS server
 const PORT = process.env.PORT || 3002;
